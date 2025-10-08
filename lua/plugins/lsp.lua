@@ -25,6 +25,7 @@ return {
           end,
           single_file_support = false,
         },
+        clangd = {},
       },
     },
   },
