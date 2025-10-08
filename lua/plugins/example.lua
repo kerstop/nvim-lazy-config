@@ -30,15 +30,6 @@ return {
   -- disable trouble
   { "folke/trouble.nvim", enabled = false },
 
-  {
-    "folke/flash.nvim",
-    treesitter = {
-      label = {
-        style = "overlay",
-      },
-    },
-  },
-
   -- override nvim-cmp and add cmp-emoji
   {
     "hrsh7th/nvim-cmp",
