@@ -19,13 +19,23 @@ return {
           end,
         },
         vtsls = {
-          root_dir = function()
-            return not vim.fs.root(0, { "deno.json", "deno.jsonc" })
-              and vim.fs.root(0, { "tsconfig.json", "jsconfig.json", "package.json", ".git" })
-          end,
+          --root_dir = function()
+          --return not vim.fs.root(0, { "deno.json", "deno.jsonc" })
+          --and vim.fs.root(0, { "tsconfig.json", "jsconfig.json", "package.json", ".git" })
+          --end,
           single_file_support = false,
         },
         clangd = {},
+        omnisharp = {
+          cmd = {
+            os.getenv("HOMEPATH") .. "\\Documents\\Code\\omnisharp-win-x64\\omnisharp.exe",
+            "-lsp",
+            "--encoding",
+            "utf-8",
+            "-z",
+            "DotNet:enablePackageRestore=false",
+          },
+        },
       },
     },
   },
